@@ -17,7 +17,7 @@ header{
     left: 0;
     width: 100%;
     height: 100px;
-    background: white;
+    background: orange;
     box-shadow: 0 4px 25px -22px black;
     z-index: 2;
 }
@@ -30,15 +30,11 @@ header{
 }
 
 .logo{
-    color: black;
+    color: white;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.logo h1 b{
-    color: #46a2fd;
 }
 
 .menu{
@@ -66,7 +62,7 @@ header{
 
 .menu nav ul li a{
     font-size: 20px;
-    color: rgb(0, 0, 0);
+    color: black;
 }
 
 .menu nav ul li a:hover{
@@ -78,10 +74,10 @@ header{
 
 .container-cover{
     width: 100%;
-    height: 300px;
+    height: 450px;
     position: relative;
     top: 80px;
-    background-image: url(../Noticiero\ escolar/Imagenes/ciudad.jpeg);
+    background-image: url("Imagenes/Portada.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -89,7 +85,7 @@ header{
 
 .container-info-cover{
     max-width: 800px;
-    height: 300px;
+    height: 450px;
     margin: auto;
     text-align: center;
     display: flex;
@@ -100,7 +96,7 @@ header{
 }
 
 .container-info-cover h1{
-    font-size: 70px;
+    font-size: 59px;
     font-weight: 500;
     color: black;
     margin-bottom: 20px;
@@ -108,7 +104,7 @@ header{
 
 .container-info-cover p{
     color: black;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 300;
 }
 
@@ -123,322 +119,38 @@ header{
     display: none;
 }
 
-/*Slider*/
+/*Filtrado*/
 
-.container-slide{
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    margin-top: 30px;
-    margin-left: 20px;
-    margin-right: 30px;
+input[type="radio"]{
+    display: none;
 }
 
-.item-slide img{
-    max-width: 100%;
-}
-
-.container-slide{
-    position: relative;
-    max-width: 500px;
+.container-category{
     width: 100%;
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.slide{
-    display: flex;
-    transform: translate3d(0, 0, 0);
-    transition: all 600ms;
-    animation-name: autoplay;
-    animation-duration: 6.5s;
-    animation-direction: alternate;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-}
-
-.item-slide{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    flex-grow: 0;
-    max-width: 100%;
-}
-
-.pagination{
-    position: absolute;
-    bottom: 20px;
-    left: 0;
+    margin-left: 74px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 95%;
+    margin-top: 20px;
 }
 
-.pagination-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid gray;
-    width: 20px;
-    height: 20px;
-    border-radius: 4px;
-    overflow: hidden;
+.container-category label{
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 20px;
+    background: #e2e2e2;
+    border-radius: 5px;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.5);
-    margin: 0 10px;
-    text-align: center;
-    transition: all 300ms;
 }
 
-.pagination-item:hover{
-    transform: scale(2);
-}
-
-.pagination-item img{
-    display: inline-block;
-    max-width: none;
-    height: 100%;
-    transform: scale(1);
-    opacity: 0;
-    transform: all 300ms;
-}
-
-.pagination-item:hover img{
-    opacity: 1;
-    transform: scale(1);
-}
-
-input[id="1"]:checked ~ .slide{
-    animation: none;
-    transform: translate3d(0, 0, 0);
-}
-
-input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
-    background: white;
-}
-
-input[id="2"]:checked ~ .slide{
-    animation: none;
-    transform: translate3d(calc(-100% * 1), 0, 0);
-}
-
-input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
-    background: white;
-}
-
-input[id="3"]:checked ~ .slide{
-    animation: none;
-    transform: translate3d(calc(-100% * 2), 0, 0);
-}
-
-input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
-    background: white;
-}
-
-@keyframes autoplay{
-    33%{
-        transform: translate3d(calc(-100% *0), 0, 0);
-    }
-
-    66%{
-        transform: translate3d(calc(-100% *1), 0, 0);
-    }
-
-    100%{
-        transform: translate3d(calc(-100% *2), 0, 0);
-    }
-}
-
-/*Cuerpo*/
-
-.Nombre{
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-
-.sub-title{
-    font-size: 30px;
-    color: black;
-}
-
-.container-content{
-    margin-top: 30px;
-    font-size: 40px;
-    color: black;
-}
-
-.container-content h5{
-    font-size: 30px;
-    color: black;
-}
-
-.container-content h2{
-    font-size: 30px;
-    color: green;
-}
-
-.existencia{
-    font-size: 30px;
-    color: red;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.Medidas{
-    font-size: 35px;
-    color: black;
-}
-
-.Numeros{
-    font-size: 25px;
-    color: rgb(153, 152, 152);
-    margin-bottom: 80px;
-}
-
-.Title-description{
-    font-size: 35px;
-    color: black;
-}
-
-.Cuerpo{
-    font-size: 25px;
-    color: rgb(153, 152, 152);;
-}
-
-.sub-title{
-    margin-bottom: 50px;
-    font-size: 50px;
-}
-
-.Valor{
-    font-size: 50px;
-}
-
-.container-content p{
-    margin-top: 30px;
-}
-
-.contenido{
-    margin-left: 80px;
-    margin-right: 250px;
-    margin-bottom: 80px;
-    margin-top: 90px;
-}
-
-.visual img{
-    margin-top: 20px;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    margin-right: 30px;
-    float: right;
-    height: 300px;
-    width: 300px;
-}
-
-/*encabezado*/
-
-.hr{
-    margin-left: 80px;
-    margin-right: 80px;
-}
-
-.encabezado{
-    font-size: 35px;
-    margin-left: 250px;
-    color: #46a2fd;
-}
-
-.diversion{
-    font-size: 35px;
-    margin-left: 350px;
-    color: #46a2fd;
-}
-
-/*alguna noticia*/
-
-.chipotle{
-    margin-right: 20px;
-    margin-left: 50px;
-    margin-top: 50px;
-    margin-bottom: 100px;
-}
-
-.alguna{
-    margin-left: 50px;
-    margin-top: 50px;
-    margin-bottom: 100px;
-}
-
-.noticia img{
-    margin-top: 20px;
-    border-radius: 10px;
-    margin-right: 30px;
-    margin-left: 20px;
-    float: right;
-    height: 500px;
-    width: 500px;
-}
-
-.Nombre2{
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-
-.Valor2{
-    font-size: 50px;
-}
-
-.texts{
-    margin-top: 30px;
-    font-size: 35px;
-}
-
-.consulta button{
-    margin-top: 20px;
-    padding: 15px 300px;
-    font-size: 30px;
-    background: #46a2fd;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-/*Boton pequeño*/
-
-.consulta2 button{
-    margin-top: 6px;
-    padding: 15px 160px;
-    font-size: 30px;
-    background: #46a2fd;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
+.container-category label:hover{
+    opacity: 0.8;
 }
 
 /*Botones*/
 
-.Botones{
+.container-post{
     width: 1200px;
     margin: auto;
-}
-
-.Secciones button{
-    margin-top: 20px;
-    margin-left: 20px;
-    padding: 15px 96px;
-    font-size: 17px;
-    background: #46a2fd;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
 }
 
 .posts{
@@ -485,7 +197,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     margin-left: 20px;
     padding: 15px 105px;
     font-size: 16px;
-    background: #46a2fd;
+    background: orange;
     color: white;
     border: none;
     cursor: pointer;
@@ -500,41 +212,12 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     color: green;
 }
 
-/*video*/
-
-.videos{
-    margin-left: 30px;
-}
-
-.video{
-    margin-left: 30px;
-    margin-right: 20px;
-    margin-top: 50px;
-    float: left;
-    margin-bottom: 100px;
-}
-
-/*publi*/
-
-.titupubli{
-    font-size: 35px;
-    margin-left: 220px;
-    color: purple;
-}
-
-.publi{
-    margin-left: 50px;
-    margin-top: 10px;
-    margin-bottom: 100px;
-    margin-right: 20px;
-}
-
 /*Footer*/
 
 footer{
     width: 100%;
     padding: 50px 0px;
-    background-image: url(../Noticiero\ escolar/Imagenes/background-footer.svg);
+    background-image: url("Imagenes/background-footer.svg");
     background-size: cover;
 }
 
@@ -553,7 +236,7 @@ footer{
 }
 
 .box-footer .logo img{
-    width: 125px;
+    width: 100px;
 }
 
 .box-footer .terminos{
@@ -594,34 +277,31 @@ footer{
     background-color: #7a7a7a;
 }
 
+/*Filtrado 2*/
+
+[value="Todos"]:checked ~ .posts .post:not([data-category]){
+    display: block;
+}
+
+[value="Cocina"]:checked ~ .posts .post:not([data-category~="Cocina"]),
+[value="Recamara"]:checked ~ .posts .post:not([data-category~="Recamara"]),
+[value="Sala"]:checked ~ .posts .post:not([data-category~="Sala"]),
+[value="Estudio"]:checked ~ .posts .post:not([data-category~="Estudio"]),
+[value="Comedor"]:checked ~ .posts .post:not([data-category~="Comedor"]){
+    display: none;
+}
+
+[value="Todos"]:checked ~ .container-category [for="Todos"],
+[value="Cocina"]:checked ~ .container-category [for="Cocina"],
+[value="Recamara"]:checked ~ .container-category [for="Recamara"],
+[value="Sala"]:checked ~ .container-category [for="Sala"],
+[value="Estudio"]:checked ~ .container-category [for="Estudio"],
+[value="Comedor"]:checked ~ .container-category [for="Comedor"]{
+    background: orange;
+    color: white;
+}
+
 /*Responsive*/
-
-/*consultas*/
-
-@media screen and (max-width: 1220px){
-    .consulta2 button{
-        margin-top: 6px;
-        padding: 40px 400px;
-        font-size: 50px;
-    }
-
-    .consulta button{
-        margin-top: 6px;
-        padding: 40px 400px;
-        font-size: 50px;
-    }
-}
-
-/*botones*/
-
-@media screen and (max-width: 1220px){
-    
-    .Secciones button{
-        margin-left: 20px;
-        padding: 30px 80px;
-        font-size: 60px;
-    }
-}
 
 /*header*/
 
@@ -631,12 +311,6 @@ footer{
         max-width: 1000px;
         padding: 0 20px;
     }
-
-}
-
-/*logo*/
-
-@media screen and (max-width: 1220px){
 
     header{
         height: 195px;
@@ -653,21 +327,15 @@ footer{
 
 @media screen and (max-width: 1220px){
 
-    .container-cover{
-        width: 100%;
-        height: 800px;
-        width: 1200px;
-        position: relative;
-        top: 80px;
-        background-image: url(../Noticiero\ escolar/Imagenes/ciudad.jpeg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+    .container-cover {
+        height: 750px;
+        top: 195px;
+        margin-bottom: 110px;
     }
 
     .container-info-cover{
         max-width: 800px;
-        height: 600px;
+        height: 720px;
         margin: auto;
         text-align: center;
         display: flex;
@@ -678,15 +346,56 @@ footer{
     }
     
     .container-info-cover img{
-        width: 900px;
-        height: 900px;
-        margin-top: 300px;
-        margin-left: 70px;
+        width: 170px;
+        height: 170px;
+    }
+
+    .container-info-cover h1{
+        font-size: 100px;
+        font-weight: 500;
+        color: black;
+        margin-bottom: 20px;
+    }
+    
+    .container-info-cover p{
+        color: black;
+        font-size: 73px;
+        font-weight: 300;
     }
 
 }
 
-/*noticias*/
+/*filtrado*/
+
+@media screen and (max-width: 1220px){
+
+    input[type="radio"]{
+        display: none;
+    }
+    
+    .container-category{
+        width: 100%;
+        margin-left: 30px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .container-category label{
+        padding: 6px 40px;
+        margin: 10px;
+        font-size: 60px;
+        background: #e2e2e2;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .container-category label:hover{
+        opacity: 0.8;
+    }
+
+}
+
+/*botones*/
 
 @media screen and (max-width: 1220px){
 
@@ -722,6 +431,30 @@ footer{
 
 }
 
+/*encabezado de ofertas*/
+
+@media screen and (max-width: 1220px){
+
+    .ofertas{
+        font-size: 45px;
+        margin-top: 50px;
+        margin-left: 105px;
+        margin-bottom: 50px;
+        color: #46a2fd;
+    }
+
+    .hr hr{
+        border: none;
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        height: 5px;
+        background-color: #7a7a7a;
+    }
+
+}
+
 /*footer*/
 
 @media screen and (max-width: 1220px){
@@ -729,11 +462,18 @@ footer{
     footer{
         width: 100%;
         padding: 50px 0px;
-        background-image: url(../Pagina\ web/Imagenes/background-footer.svg);
+        background-image: url("Imagenes/background-footer.svg");
         background-size: cover;
     }
     
-
+    .container-footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 100px;
+    }
     
     .box-footer .logo img{
         width: 300px;
@@ -755,26 +495,15 @@ footer{
         font-size: 50px;
     }
     
-    .copyright{
-        max-width: 1200px;
-        margin: auto;
-        text-align: center;
-        padding: 0px 40px;
-    }
-    
     .copyright p{
         margin-top: 20px;
         color: #7a7a7a;
         font-size: 50px;
     }
-    
-    .copyright hr{
-        border: none;
-        height: 1px;
-        background-color: #7a7a7a;
-    }
 
 }
+
+/*orden*/
 
 @media screen and (max-width: 1200px){
     .posts{
@@ -792,5 +521,4 @@ footer{
     .posts{
         grid-template-columns: repeat(1, 1fr);
     }
-
 }
